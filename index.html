@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cat Clicker</title>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    <label id="name1"></label>
+    <img id="picture1" src="img/cat.jpg">
+    <label id="number1"></label>
+
+    <label id="name2"></label>
+    <img id="picture2" src="img/cat.jpg">
+    <label id="number2"></label>
+
+    <script type ="text/javascript">
+        var cat1 = "jane";
+        var cat2 = "jennifer";
+
+        var number1 = parseInt(document.getElementById('number1').textContent);
+
+        document.getElementById('picture1').onclick = function()
+        {
+            document.getElementById('name1').textContent = cat1;
+            if(isNaN(number1))
+            {
+                number1 = 0;
+            }
+
+            number1 += 1;
+            document.getElementById('number1').textContent = number1;
+        }
+
+        var number2 = parseInt(document.getElementById('number2').textContent);
+
+        document.getElementById('picture2').onclick = function()
+        {
+            document.getElementById('name2').textContent = cat2;
+            if(isNaN(number2))
+            {
+                number2 = 0;
+            }
+
+            number2 += 1;
+            document.getElementById('number2').textContent = number2;
+        }
+
+    </script>
+
+</body>
+</html>
